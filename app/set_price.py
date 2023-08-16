@@ -8,7 +8,7 @@ from datetime import date
 
 def set_prise_date(price_id, price) -> None:
     my_date = date.today()
-    cur.execute('UPDATE price_list SET act_date = ?, price = ? WHERE id = ?', (my_date, price, price_id))
+    cur.execute('UPDATE price_list SET act_date = ?, price = ? WHERE id = ?', (my_date, price, price_id,))
     con.commit()
     print(f'Информация для id {price_id} обновлена')
 
